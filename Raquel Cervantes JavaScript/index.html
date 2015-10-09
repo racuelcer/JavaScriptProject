@@ -1,68 +1,79 @@
-<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
-
-
-<html xmlns="http://www.w3.org/1999/xhtml">
+<!DOCTYPE html>
+<html>
 
 <head>
-<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
-<title>Coming Soon</title>
-<link href="style.css" rel="stylesheet" type="text/css" />
-<link href="style.css" rel="stylesheet" type="text/css" />
-<script type="text/javascript" src="tools/jquery.min.js"></script> 
-<script type="text/javascript" src="tools/cufon-yui.js"></script>
-<script type="text/javascript" src="tools/Akzidenz-Grotesk_BQ_500-Akzidenz-Grotesk_BQ_500-Akzidenz-Grotesk_BQ_italic_700.font.js"></script>
-<script type="text/javascript" src="tools/FontSoupGerman_700.font.js"></script>
-<script type="text/javascript" src="tools/library.js"></script>
-<script type="text/javascript" src="tools/weather.js"></script>
+	<script src="js/instafeed.min.js" type="text/javascript"> </script>
+	 <link href="style/style.css" rel="stylesheet" type="text/css">
+	 <script type="text/javascript" src="js/library.js"></script>
 
+	<script type="text/javascript">
+	var feed = new Instafeed({
+		get: "tagged",
+		tagName: "NewYork",
+		limit: '1',
+		links: 'false',
+		clientId: "a3ef111ed43345068cf0696cf3c63882",
+		resolution: "low_resolution",
+		
+	});
+	feed.run()
+	</script>
 
 </head>
+</head>
 
+	<body>
+	<div id="header">
+			<div class="hit-the-floor">
+  		  			Create
+  		 	</div>
+  		 	<p> your canvas over #NewYork latest Instagram pictures </p>
+			
+	</div>
 
-<body>
-<div id="wrapper">
-	<div class="main_content">
-		<div class="uppersection">
-			<div class="logo"></div>
-			<h2><strong>FAIRY TALE</strong> <br/>create your own <span>'story'</span></h2>
-			<p>Background change with weather.</p> <br />
-            <div class="top" align="center">
-            <a class="button" href="#canvas" > Empezar</a><br />
-            </div>
+	
+		<div id="insta-wrap">
+			<p class="bodytext">Drag the images to the canvas!! </p>
+
+			<div id="instafeed">	
 			</div>
-        <a name="#canvas"> 
-        
-        <br/> <br/><br/> 
-      </div>
-         
-         
-        
-        <a name="#canvas"> 
-        <h2>
-        Drag images to the canvas an create your image 
-        </h2>
-        
-        <br />
-        
-        <div>
-        
-            <img id="img1" draggable="true" ondragstart="drag(event)" src='images/alien.png'>
-            <img id="img2" draggable="true" ondragstart="drag(event)" src='images/monster.png'> 
-            <img id="img3" draggable="true" ondragstart="drag(event)" src='images/jelly.png'> 
-            <img id="img4" draggable="true" ondragstart="drag(event)" src='images/fish.png'>
-            <img id="img5" draggable="true" ondragstart="drag(event)" src='images/boy.png'> 
-            <img id="img6" draggable="true" ondragstart="drag(event)" src='images/girl.png'> 
-            
+		<canvas id = "canvas" ondrop="drop(event)" ondragover="allowDrop(event)" width="320" height="320">  </canvas>
+
+		
+	
+		<div class= "images">
+
+		    <img id="img1" draggable="true" ondragstart="drag(event)" src='images/boy.png'>
+            <img id="img2" draggable="true" ondragstart="drag(event)" src='images/girl.png'> 
+            <img id="img3" draggable="true" ondragstart="drag(event)" src='images/son.png'> 
+            <img id="img4" draggable="true" ondragstart="drag(event)" src='images/luna.png'>
+	
+			<img id="img5" draggable="true" ondragstart="drag(event)" src='images/alien.png'>
+            <img id="img6" draggable="true" ondragstart="drag(event)" src='images/monster.png'> 
+            <img id="img7" draggable="true" ondragstart="drag(event)" src='images/jelly.png'> 
+            <img id="img8" draggable="true" ondragstart="drag(event)" src='images/fish.png'>
+       
+       	 <img id="img9" draggable="true" ondragstart="drag(event)" src='images/cow.png'>
+            <img id="img10" draggable="true" ondragstart="drag(event)" src='images/heart.png'> 
+            <img id="img11" draggable="true" ondragstart="drag(event)" src='images/star.png'> 
+            <img id="img12" draggable="true" ondragstart="drag(event)" src='images/cloud.png'>
         </div>
-        
-        <div align="center">
-        <canvas id="canvas" ondrop="drop(event)" ondragover="allowDrop(event)" width="800" height="500" style="border: 1px solid gray"  >  </canvas>
-        
-        </div>
-		 <br /> <br />
-         <div class="footer" align="center">
-         change weather: https://css-tricks.com/     canvas> http://stackoverflow.com/
+
+        	<a id="download" download="image.png"> Download Image </a>
+ 	
+ 			<script type="text/javascript">
+        		var canvas = document.getElementById("canvas");
+
+        		function download () {
+            	var dt = canvas.toDataURL();
+            	this.href=dt;
+       		 	}
+
+        		document.getElementById("download").addEventListener("click",download,false)
+     		</script>   
+     </div>		
+
+    <div class="footer" align="center">
+         change weather: https://css-tricks.com/ 
          </div>
-</div>
-</body>
-</html>
+	</body>

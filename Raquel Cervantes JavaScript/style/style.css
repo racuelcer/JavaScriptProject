@@ -1,0 +1,94 @@
+body{
+margin:0;
+padding:0;
+background: #e5dcdc url(../images/bg.png) top center repeat-x;
+font-family: Helvetica Neue, Helvetica, Arial;
+}
+
+#instafeed {
+ float: left;
+  width: 500px:;
+  height: 500px;
+    position: relative;
+ 
+}
+
+#wrapper{
+	position: absolute;;
+	width: 100%;
+	height: 160px;
+}
+
+
+#canvas {
+	
+	background:transparent;
+	position: absolute; top; 0px; left: 0px;
+	background-color: rgba(255,0 0, .1);
+	margin-left: 150px;
+}
+
+#header{ 
+	margin: 0, 150px, 0, 10px;
+	width: 100%;
+	height: 200px;
+	color: #fff;
+	text-align: center;
+	
+}
+
+.hit-the-floor {
+color: #fff;
+font-size: 80px;
+font-weight: bold;
+font-family: Helvetica;
+text-shadow: 0 1px 0 #ccc, 0 2px 0 #c9c9c9, 0 3px 0 #bbb, 0 4px 0 #b9b9b9, 0 5px 0 #aaa, 0 6px 1px rgba(0,0,0,.1), 0 0 5px rgba(0,0,0,.1), 0 1px 3px rgba(0,0,0,.3), 0 3px 5px rgba(0,0,0,.2), 0 5px 10px rgba(0,0,0,.25), 0 10px 10px rgba(0,0,0,.2), 0 20px 20px rgba(0,0,0,.15);
+margin-top: 50px;
+}
+
+.hit-the-floor {
+  text-align: center;
+}
+
+.bodytext{
+	color: #bc0092;
+	font-size: 30px;
+	font-weight: bold;
+	letter-spacing: -2px;
+}
+
+#insta-wrap{
+	width: 80%;
+	vertical-align: center;
+	margin-left: 150px;
+}
+
+.images{
+	border: 15px;
+	padding: 15px;
+}
+
+.footer{
+	margin-top: 150px;
+	padding:0;
+	width: 100%;
+	height:40px;
+	background-color: #bc0092;
+	font-size: 12px;
+	font-family:Gotham, "Helvetica Neue", Helvetica, Arial, sans-serif;
+	color:#fff;
+}
+
+a{
+	color: #bc0092;
+	text-decoration: underline;
+	font-size: 20px
+
+}
+
+a:hover{
+	color: #ba94b2;
+	text-decoration: underline;
+	font-size: 20px
+
+}

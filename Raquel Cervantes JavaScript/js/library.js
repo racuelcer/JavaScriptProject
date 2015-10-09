@@ -111,18 +111,4 @@
 
         }
 
-        function convertCanvasToImage() {
-            var canvas = document.getElementById('canvas');
-
-            var image_src = canvas.toDataURL("image/png");
-            window.open(image_src);
-
-        }
-		
-		function clear_canvas_width ()
-{
-    var s = document.getElementById ("canvas");
-    var w = s.width;
-    s.width = 10;
-    s.width = w;
-}
+        
